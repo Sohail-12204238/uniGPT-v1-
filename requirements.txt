@@ -1,0 +1,8 @@
+django
+gunicorn
+whitenoise
+langchain
+langchain-groq
+qdrant-client
+tavily-python
+python-dotenv
