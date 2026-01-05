@@ -1,17 +1,18 @@
-Django>=5.2
+Django==5.2.9
 djangorestframework
 django-cors-headers
 gunicorn
 whitenoise
 
 langchain
-langchain-groq
 langchain-core
+langchain-community
 langchain-qdrant
+langchain-groq
+
 qdrant-client
-
-python-dotenv
-pypdf
-tavily-python
-
 sentence-transformers
+pypdf
+python-dotenv
+tavily-python
+httpx
