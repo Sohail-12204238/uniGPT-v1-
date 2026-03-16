@@ -9,6 +9,7 @@ langchain-core
 langchain-community
 langchain-qdrant
 langchain-groq
+langchain-huggingface
 
 qdrant-client
 sentence-transformers
