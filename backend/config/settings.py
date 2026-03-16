@@ -10,7 +10,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "dev-only-secret")
 
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = ["*"]  # SAFE for Render, tighten later if needed
+ALLOWED_HOSTS = ["*",".onrender.com"]  # SAFE for Render, tighten later if needed
 
 # -------------------------------------------------------------
 # APPS
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",   # ADD THIS
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
