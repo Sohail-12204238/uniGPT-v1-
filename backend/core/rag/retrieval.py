@@ -4,6 +4,7 @@ os.environ["TRANSFORMERS_NO_TF"] = "1"
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
+from langchain_cohere import CohereEmbeddings
 
 from .config import QDRANT_URL, QDRANT_API_KEY, QDRANT_COLLECTION, EMBED_MODEL
 
@@ -14,9 +15,9 @@ _retriever = None
 def get_embeddings():
     global _embeddings
     if _embeddings is None:
-        _embeddings = HuggingFaceEmbeddings(
-            model_name=EMBED_MODEL,
-            encode_kwargs={"normalize_embeddings": False},
+        _embeddings = CohereEmbeddings(
+            cohere_api_key=os.getenv("COHERE_API_KEY"),
+            model="embed-english-v3.0"
         )
     return _embeddings
 
