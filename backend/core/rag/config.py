@@ -12,6 +12,6 @@ TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 PDF_DIR = Path(os.getenv("PDF_DIR", BASE_DIR / "data" / "documents"))
 
-EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
+EMBED_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
 FALLBACK_PHRASE = "I'm sorry, I could not find that information in the university guidelines."
