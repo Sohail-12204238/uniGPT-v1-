@@ -12,6 +12,10 @@ langchain-groq
 
 qdrant-client
 sentence-transformers
+
+torch==2.2.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
 pypdf
 python-dotenv
 tavily-python

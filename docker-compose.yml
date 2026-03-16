@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  unigpt:
+    build: ./backend
+    container_name: unigpt-app
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SECRET_KEY: your_secret_key
+      DEBUG: "False"
+
+      GROQ_API_KEY: your_groq_key
+      QDRANT_URL: your_qdrant_url
+      QDRANT_API_KEY: your_qdrant_key
+      QDRANT_COLLECTION: university_policies
+      TAVILY_API_KEY: your_tavily_key
